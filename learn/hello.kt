@@ -3,6 +3,12 @@ class Person {
 }
 
 class PersonWithConstructor(var Name:String) {
+    fun display(){
+        println("Name is $Name")
+    }
+    fun higherOrdFunc(func: (name: String) -> Unit){
+        func(Name)
+    }
 }
 
 fun main(args: Array<String>){
@@ -18,4 +24,5 @@ fun main(args: Array<String>){
     println("imutable instance name var value: ${immutableInstance.Name}")
     val p3 = PersonWithConstructor("name from constructor")
     println("person with constructor: ${p3.Name}")
+    p3.display()
 }
