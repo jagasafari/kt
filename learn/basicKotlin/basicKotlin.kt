@@ -11,6 +11,8 @@ fun main(args: Array<String>){
     else{
         message="wrong answer"}
     println(message)
+    val msg = if(game.Answer == "42") "ok" else "wrong answer"
+    println(msg)
 }
 
 
