@@ -2,6 +2,9 @@ class Person {
     var Name:String = ""
 }
 
+class PersonWithConstructor(var Name:String) {
+}
+
 fun main(args: Array<String>){
     println("hallo world") 
     var mutableInstance = Person()
@@ -13,4 +16,6 @@ fun main(args: Array<String>){
     println("imutable instance: ${immutableInstance}")
     immutableInstance.Name = "assign name"
     println("imutable instance name var value: ${immutableInstance.Name}")
+    val p3 = PersonWithConstructor("name from constructor")
+    println("person with constructor: ${p3.Name}")
 }
