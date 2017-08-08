@@ -17,6 +17,13 @@ fun main(args: Array<String>){
     if(game?.AnsNullable != null){
         println("not null")
     }
+    println("${parseInt()}")
 }
+private fun parseInt() =
+    try{
+        "5".toInt()
+    }
+    catch(e: NumberFormatException){
+        8}
 
 
