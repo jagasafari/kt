@@ -18,6 +18,13 @@ fun main(args: Array<String>){
         println("not null")
     }
     println("${parseInt()}")
+    downToByStep()
+}
+private fun downToByStep(){
+    for( i in 99 downTo -9 step 30)
+    {
+        println(i)
+    }
 }
 private fun parseInt() =
     try{
