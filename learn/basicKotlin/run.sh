@@ -1,4 +1,9 @@
 #!/bin/bash
-rm basicKotlin.jar
-kotlinc basicKotlin.kt -include-runtime -d basicKotlin.jar
-java -jar basicKotlin.jar
+file=$1
+jar="$file.jar"
+kt="$file.kt"
+if [ -f $jar ] ; then 
+    rm $jar 
+fi
+kotlinc $kt -include-runtime -d $jar
+java -jar $jar
